@@ -71,8 +71,6 @@ body {
 .App-header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -86,5 +84,22 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.gender-filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 177px;
+
+  .gender-filter-title {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    margin-bottom: 3px;
   }
 }

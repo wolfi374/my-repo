@@ -8,7 +8,25 @@ const App = () => {
       <header className="App-header">
         <SearchInput />
         <div className="gender-filter-container">
-          Фильтр по полу
+          <div className="gender-filter-title">Фильтр по полу</div>
+          <RadioInput
+            text="Все"
+            value="all"
+            name="gender"
+          />
+          <RadioInput
+            text="Только женщины"
+            value="female"
+            name="gender"
+          />
+          <RadioInput
+            text="Только мужчины"
+            value="male"
+            name="gender"
+          />
+        </div>
+        <div className="age-filter-container">
+          <div className="age-filter-title">Фильтр по возрастным группам</div>
           <RadioInput
             text="Все"
             value="all"
