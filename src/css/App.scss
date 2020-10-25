@@ -87,40 +87,49 @@ body {
   }
 }
 
-.gender-filter-container {
+.filters-block {
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: 177px;
+  flex-wrap: wrap;
 
-  .gender-filter-title {
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 18px;
-    color: #000000;
-    margin-bottom: 3px;
-  }
-}
-
-.age-filter-container {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: 196px;
-
-  .age-filter-title {
-    font-family: PT Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 18px;
-    color: #000000;
-    margin-bottom: 3px;
-  }
-  .age-filter-checkboxes-block {
+  .gender-filter-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 177px;
+    width: 177px;
+
+    .gender-filter-title {
+      font-family: PT Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      color: #000000;
+      margin-bottom: 3px;
+      margin-top: 4px;
+    }
+  }
+
+  .age-filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 196px;
+    width: 196px;
+
+    .age-filter-title {
+      font-family: PT Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      color: #000000;
+      margin-bottom: 3px;
+      margin-top: 4px;
+    }
+    .age-filter-checkboxes-block {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }
