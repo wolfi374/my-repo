@@ -1,8 +1,7 @@
 import './css/App.scss';
 import SearchInput from './components/search-input';
 import FiltersBlock from './components/filters-block';
-// import RadioInput from './ui-kit/radio-input'
-// import CheckboxInput from './ui-kit/checkbox-input';
+import CardsBlock from './components/cards-block';
 
 const App = () => {
   return (
@@ -10,9 +9,10 @@ const App = () => {
       <header className="App-header">
         <SearchInput />
         <FiltersBlock />
-
       </header>
-      <main></main>
+      <main>
+        <CardsBlock />
+      </main>
     </div>
   );
 }
