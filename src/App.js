@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.scss';
+import './css/App.scss';
 
 const App = () => {
   return (
@@ -18,6 +18,7 @@ const App = () => {
           Learn React
         </a>
       </header>
+      <main></main>
     </div>
   );
 }
