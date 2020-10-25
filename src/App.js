@@ -11,7 +11,9 @@ const App = () => {
         <FiltersBlock />
       </header>
       <main>
-        <CardsBlock />
+        <article>
+          <CardsBlock />
+        </article>
       </main>
     </div>
   );
