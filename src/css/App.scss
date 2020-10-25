@@ -103,3 +103,24 @@ body {
     margin-bottom: 3px;
   }
 }
+
+.age-filter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 196px;
+
+  .age-filter-title {
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    margin-bottom: 3px;
+  }
+  .age-filter-checkboxes-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
