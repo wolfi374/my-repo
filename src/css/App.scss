@@ -43,6 +43,13 @@ textarea,
 select {
   font: inherit;
 }
+input:focus {
+  outline: none;
+}
+
+body {
+  padding: 40px 16px;
+}
 
 .App {
   text-align: center;
