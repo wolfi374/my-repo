@@ -5,7 +5,7 @@ const CheckboxInput = ({ value }) => {
   return (
     <div className="checkbox-input-container">
       <input className="checkbox-input" id={`checkbox-input-${value}`} type="checkbox" name={value} value={value} />
-      <label className="checkbox-input-label" for={`checkbox-input-${value}`}>
+      <label className="checkbox-input-label" htmlFor={`checkbox-input-${value}`}>
         <div className="checkbox-input-clickbox" />
         {value}
       </label>

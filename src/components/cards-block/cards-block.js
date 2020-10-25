@@ -1,5 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import UserCard from '../../ui-kit/user-card';
 
 const apiUrl = 'https://randomuser.me/api/?nat=us&results=20';
 
@@ -14,7 +16,6 @@ const CardsBlock = () => {
     try {
       const response = await axios.get(apiUrl);
       setUsers(response.data.results);
-      console.log(users);
     } catch (error) {
       console.error('Error from cards-block.js - getCardsData', error);
     }
@@ -22,7 +23,11 @@ const CardsBlock = () => {
 
   return (
     <div>
-      {users.map((userData) => <div>{userData.name.last}</div>)}
+      {users.map((userData) => (
+        <UserCard
+          userData={userData}
+        />
+      ))}
     </div>
   );
 }
