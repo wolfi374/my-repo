@@ -1,8 +1,14 @@
 import React from 'react';
+import moment from 'moment';
 import './user-card.scss';
 
 const UserCard = ({ userData }) => {
   console.log(userData);
+
+  const getFormattedRegistrationDate = () => {
+    const date = new Date(userData.registered.date);
+    return moment(date).format('DD.MM.YYYY');
+  }
 
   return (
     <div className="user-card-container">
@@ -24,7 +30,7 @@ const UserCard = ({ userData }) => {
           <dd> {userData.location.country}, {userData.location.city}</dd>
           <br />
           <dt>Дата регистрации:</dt>
-          <dd> {userData.registered.date}</dd>
+          <dd> {getFormattedRegistrationDate()}</dd>
         </dl>
       </div>
     </div>
