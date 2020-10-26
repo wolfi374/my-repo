@@ -26,17 +26,20 @@ const CardsBlock = () => {
   }
 
   return (
-    <div className="cards-container">
-      {!errorMessage && users.map((userData) => (
-        <UserCard
-          key={userData.id.value}
-          userData={userData}
-        />
-      ))}
-      {errorMessage &&
+    <>
+      {!errorMessage ?
+        <div className="cards-container">
+          {users.map((userData) => (
+            <UserCard
+              key={userData.id.value}
+              userData={userData}
+            />
+          ))}
+        </div>
+        :
         <div>{errorMessage}</div>
       }
-    </div>
+    </>
   );
 }
 
