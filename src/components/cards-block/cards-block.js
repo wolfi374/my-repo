@@ -4,7 +4,7 @@ import axios from 'axios';
 import UserCard from '../../ui-kit/user-card';
 import './cards-block.scss';
 
-const apiUrl = 'https://randomuser.me/api/?nat=us&results=20';
+const apiUrl = 'https://randomuser.me/api/?nat=us&results=21';
 
 const CardsBlock = () => {
   const [users, setUsers] = useState([]);
