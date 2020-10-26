@@ -26,7 +26,6 @@
     flex-direction: column;
     align-items: flex-start;
     min-width: 196px;
-    width: 196px;
 
     .age-filter-title {
       font-family: PT Sans;
@@ -41,6 +40,7 @@
     .age-filter-checkboxes-block {
       display: flex;
       flex-wrap: wrap;
+      width: 196px;
     }
   }
 }
