@@ -7,7 +7,7 @@ import './css/App.scss';
 const App = () => {
   const [searchInputText, setSearchInputText] = useState('');
 
-  console.log(searchInputText);
+  // console.log(searchInputText);
 
   return (
     <div className="App">

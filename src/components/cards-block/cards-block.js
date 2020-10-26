@@ -5,8 +5,9 @@ import UserCard from '../../ui-kit/user-card';
 import './cards-block.scss';
 
 const apiUrl = 'https://randomuser.me/api/?nat=us&results=21';
+let basicUserData = [];
 
-const CardsBlock = () => {
+const CardsBlock = ({ searchText }) => {
   const [users, setUsers] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -14,14 +15,39 @@ const CardsBlock = () => {
     getCardsData();
   }, []);
 
+  useEffect(() => {
+    updateUsersCards();
+  }, [searchText]);
+
   const getCardsData = async () => {
     try {
       setErrorMessage('');
       const response = await axios.get(apiUrl);
+
       setUsers(response.data.results);
+      basicUserData = response.data.results;
     } catch (error) {
       setErrorMessage('Не удалось загрузить пользователей!');
       console.error('Error from cards-block.js - getCardsData', error);
+    }
+  }
+
+  const updateUsersCards = () => {
+    setErrorMessage('');
+
+    if (searchText) {
+      const sampleData = basicUserData.slice();
+      const searchTextLowerCase = searchText.toLowerCase();
+
+      const selectedUsers = sampleData.filter((user) =>
+        (user.name.first.toLowerCase().includes(searchTextLowerCase) ||
+          user.name.last.toLowerCase().includes(searchTextLowerCase)));
+
+      setUsers(selectedUsers);
+
+      if (selectedUsers.length === 0) setErrorMessage('Пользователь не найден');
+    } else {
+      setUsers(basicUserData);
     }
   }
 
