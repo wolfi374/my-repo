@@ -1,3 +1,8 @@
+%pt-sans-font-normal-style {
+  font-family: PT Sans;
+  font-style: normal;
+}
+
 .user-card-container {
   display: flex;
   align-items: center;
@@ -22,34 +27,35 @@
 
     .user-name {
       margin-bottom: 2px;
-      font-family: PT Sans;
-      font-style: normal;
       font-weight: bold;
       font-size: 13px;
       line-height: 17px;
       color: #000000;
+      @extend %pt-sans-font-normal-style;
     }
 
-    .user-info-fields {
+    .user-info-fields-container {
       text-align: left;
 
-      dt {
-        display: inline;
-        font-family: PT Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10px;
-        line-height: 13px;
-        color: rgba(0, 0, 0, 0.6);
-      }
-      dd {
-        display: inline;
-        font-family: PT Sans;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 10px;
-        line-height: 13px;
-        color: #000000;
+      .user-info-field {
+        display: flex;
+        margin-bottom: 2px;
+
+        dt {
+          @extend %pt-sans-font-normal-style;
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 13px;
+          color: rgba(0, 0, 0, 0.6);
+        }
+        dd {
+          @extend %pt-sans-font-normal-style;
+          font-weight: bold;
+          font-size: 10px;
+          line-height: 13px;
+          color: #000000;
+          margin-left: 3px;
+        }
       }
     }
   }
