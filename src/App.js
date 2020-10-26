@@ -6,8 +6,7 @@ import './css/App.scss';
 
 const App = () => {
   const [searchInputText, setSearchInputText] = useState('');
-
-  // console.log(searchInputText);
+  const [genderFilter, setGenderFilter] = useState('all');
 
   return (
     <div className="App">
@@ -15,12 +14,15 @@ const App = () => {
         <SearchInput
           onChange={setSearchInputText}
         />
-        <FiltersBlock />
+        <FiltersBlock
+          onChangeGenderFilter={setGenderFilter}
+        />
       </header>
       <main>
         <article>
           <CardsBlock
             searchText={searchInputText}
+            genderFilter={genderFilter}
           />
         </article>
       </main>

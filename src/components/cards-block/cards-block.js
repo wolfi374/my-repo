@@ -7,7 +7,7 @@ import './cards-block.scss';
 const apiUrl = 'https://randomuser.me/api/?nat=us&results=21';
 let basicUserData = [];
 
-const CardsBlock = ({ searchText }) => {
+const CardsBlock = ({ searchText, genderFilter }) => {
   const [users, setUsers] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -16,12 +16,17 @@ const CardsBlock = ({ searchText }) => {
   }, []);
 
   useEffect(() => {
-    updateUsersCards();
+    findUsersByName();
   }, [searchText]);
+
+  useEffect(() => {
+    filterUsersByGender();
+  }, [genderFilter]);
 
   const getCardsData = async () => {
     try {
       setErrorMessage('');
+
       const response = await axios.get(apiUrl);
 
       setUsers(response.data.results);
@@ -32,22 +37,45 @@ const CardsBlock = ({ searchText }) => {
     }
   }
 
-  const updateUsersCards = () => {
+  const findUsersByName = () => {
     setErrorMessage('');
 
     if (searchText) {
       const sampleData = basicUserData.slice();
       const searchTextLowerCase = searchText.toLowerCase();
+      let selectedUsers = [];
 
-      const selectedUsers = sampleData.filter((user) =>
-        (user.name.first.toLowerCase().includes(searchTextLowerCase) ||
-          user.name.last.toLowerCase().includes(searchTextLowerCase)));
+      if (genderFilter === 'all') {
+        selectedUsers = sampleData.filter((user) =>
+          (user.name.first.toLowerCase().includes(searchTextLowerCase) ||
+            user.name.last.toLowerCase().includes(searchTextLowerCase))
+        );
+      } else {
+        selectedUsers = sampleData.filter((user) =>
+          ((user.name.first.toLowerCase().includes(searchTextLowerCase) ||
+            user.name.last.toLowerCase().includes(searchTextLowerCase)) &&
+            user.gender === genderFilter
+          )
+        );
+      }
 
       setUsers(selectedUsers);
 
       if (selectedUsers.length === 0) setErrorMessage('Пользователь не найден');
     } else {
+      filterUsersByGender();
+    }
+  }
+
+  const filterUsersByGender = () => {
+    let selectedUsers = [];
+    const sampleData = basicUserData.slice();
+
+    if (genderFilter === 'all') {
       setUsers(basicUserData);
+    } else {
+      selectedUsers = sampleData.filter((user) => user.gender === genderFilter);
+      setUsers(selectedUsers);
     }
   }
 

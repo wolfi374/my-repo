@@ -3,7 +3,7 @@ import RadioInput from '../..//ui-kit/radio-input'
 import CheckboxInput from '../../ui-kit/checkbox-input';
 import './filters-block.scss';
 
-const FiltersBlock = () => {
+const FiltersBlock = ({ onChangeGenderFilter }) => {
   return (
     <div className="filters-block">
       <div className="gender-filter-container">
@@ -12,16 +12,20 @@ const FiltersBlock = () => {
           text="Все"
           value="all"
           name="gender"
+          onChange={onChangeGenderFilter}
+          checked
         />
         <RadioInput
           text="Только женщины"
           value="female"
           name="gender"
+          onChange={onChangeGenderFilter}
         />
         <RadioInput
           text="Только мужчины"
           value="male"
           name="gender"
+          onChange={onChangeGenderFilter}
         />
       </div>
       <div className="age-filter-container">
