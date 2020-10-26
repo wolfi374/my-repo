@@ -77,6 +77,10 @@ const CardsBlock = ({ searchText, genderFilter }) => {
       selectedUsers = sampleData.filter((user) => user.gender === genderFilter);
       setUsers(selectedUsers);
     }
+
+    if (searchText) {
+      findUsersByName();
+    }
   }
 
   return (
