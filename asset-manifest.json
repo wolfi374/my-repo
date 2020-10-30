@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/my-repo/static/css/main.03a51468.chunk.css",
-    "main.js": "/my-repo/static/js/main.3958f95f.chunk.js",
-    "main.js.map": "/my-repo/static/js/main.3958f95f.chunk.js.map",
-    "runtime-main.js": "/my-repo/static/js/runtime-main.a95529aa.js",
-    "runtime-main.js.map": "/my-repo/static/js/runtime-main.a95529aa.js.map",
-    "static/js/2.e2232f23.chunk.js": "/my-repo/static/js/2.e2232f23.chunk.js",
-    "static/js/2.e2232f23.chunk.js.map": "/my-repo/static/js/2.e2232f23.chunk.js.map",
-    "static/js/3.701e270b.chunk.js": "/my-repo/static/js/3.701e270b.chunk.js",
-    "static/js/3.701e270b.chunk.js.map": "/my-repo/static/js/3.701e270b.chunk.js.map",
+    "main.js": "/my-repo/static/js/main.6f6df00f.chunk.js",
+    "main.js.map": "/my-repo/static/js/main.6f6df00f.chunk.js.map",
+    "runtime-main.js": "/my-repo/static/js/runtime-main.f48f0cbb.js",
+    "runtime-main.js.map": "/my-repo/static/js/runtime-main.f48f0cbb.js.map",
+    "static/js/2.0c620d38.chunk.js": "/my-repo/static/js/2.0c620d38.chunk.js",
+    "static/js/2.0c620d38.chunk.js.map": "/my-repo/static/js/2.0c620d38.chunk.js.map",
+    "static/js/3.154df91a.chunk.js": "/my-repo/static/js/3.154df91a.chunk.js",
+    "static/js/3.154df91a.chunk.js.map": "/my-repo/static/js/3.154df91a.chunk.js.map",
     "index.html": "/my-repo/index.html",
     "static/css/main.03a51468.chunk.css.map": "/my-repo/static/css/main.03a51468.chunk.css.map",
-    "static/js/2.e2232f23.chunk.js.LICENSE.txt": "/my-repo/static/js/2.e2232f23.chunk.js.LICENSE.txt"
+    "static/js/2.0c620d38.chunk.js.LICENSE.txt": "/my-repo/static/js/2.0c620d38.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a95529aa.js",
-    "static/js/2.e2232f23.chunk.js",
+    "static/js/runtime-main.f48f0cbb.js",
+    "static/js/2.0c620d38.chunk.js",
     "static/css/main.03a51468.chunk.css",
-    "static/js/main.3958f95f.chunk.js"
+    "static/js/main.6f6df00f.chunk.js"
   ]
 }
